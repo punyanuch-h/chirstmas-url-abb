@@ -1,0 +1,7 @@
+name = "url-shortener-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+kv_namespaces = [
+  { binding = "URLS", id = "758158320a544f26b026d3e280a6396f" }
+]
