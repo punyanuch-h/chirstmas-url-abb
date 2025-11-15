@@ -47,7 +47,7 @@ function App() {
   const [url, setUrl] = useState("");
   const [result, setResult] = useState("");
 
-  const WORKER_API = "https://christmasabb.workers.dev/shorten";
+  const WORKER_API = import.meta.env.VITE_WORKER_API || "/shorten";
 
   const onShorten = async () => {
     if (!url.trim()) {

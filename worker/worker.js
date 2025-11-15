@@ -23,16 +23,34 @@ export default {
   
         await env.URLS.put(code, longUrl);
   
+        // Use the request origin to build the short URL
+        const origin = url.origin;
+        const shortUrl = `${origin}/${code}`;
+  
         return new Response(
           JSON.stringify({
-            shortUrl: `https://christmasabb.workers.dev${code}`,
+            shortUrl: shortUrl,
           }),
           {
             headers: {
               "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Methods": "POST, OPTIONS",
+              "Access-Control-Allow-Headers": "Content-Type",
             },
           }
         );
+      }
+  
+      // Handle CORS preflight
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+          },
+        });
       }
   
       return new Response("OK");
