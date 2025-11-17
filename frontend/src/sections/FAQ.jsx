@@ -1,21 +1,8 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { Sparkles } from "lucide-react";
+import theme from "../theme/theme";
 
-const theme = {
-  colors: {
-    background: "#C9AE92",
-    primary: "#8C1C1C",
-    secondary: "#1E3A28",
-    gold: "#D7A84E",
-    accent: "#8B5A2F",
-    text: "#2F2722",
-    lightText: "#F5EDE1",
-    glow: "rgba(215, 168, 78, 0.4)",
-  }
-};
-
-// ================== BACKGROUND WRAPPER =====================
 const Wrapper = styled.section`
   min-height: 100vh;
   padding: 80px 40px;
@@ -44,30 +31,6 @@ const Wrapper = styled.section`
   }
 `;
 
-const MagicParticles = styled.div`
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  span {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: ${theme.colors.gold};
-    opacity: 0.7;
-    filter: blur(2px);
-    animation: sparkle 4s infinite ease-in-out;
-  }
-
-  @keyframes sparkle {
-    0% { transform: translateY(0) scale(1); opacity: 0.6; }
-    50% { transform: translateY(-20px) scale(1.4); opacity: 1; }
-    100% { transform: translateY(0) scale(1); opacity: 0.6; }
-  }
-`;
-
-// ================== HEADER =====================
 const Container = styled.div`
   max-width: 820px;
   margin: 0 auto;
@@ -115,8 +78,6 @@ const Subtitle = styled.p`
   }
 `;
 
-// ================== FAQ ITEMS =====================
-// **2 Columns Grid**
 const ItemsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -209,7 +170,6 @@ const AnswerContent = styled.div`
   }
 `;
 
-// ================== MAIN COMPONENT =====================
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 

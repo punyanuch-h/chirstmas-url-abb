@@ -1,18 +1,7 @@
 import styled from "@emotion/styled";
 import { Star } from "lucide-react";
 import { useState } from "react";
-
-const theme = {
-  colors: {
-    background: "#C9AE92",
-    primary: "#8C1C1C",
-    secondary: "#1E3A28",
-    gold: "#D7A84E",
-    accent: "#8B5A2F",
-    text: "#2F2722",
-    lightText: "#F5EDE1",
-  }
-};
+import theme from "../theme/theme";
 
 const PageWrapper = styled.main`
   min-height: 100vh;
@@ -80,29 +69,6 @@ const Subtitle = styled.p`
 
   @media (max-width: 768px) {
     font-size: 16px;
-  }
-`;
-
-const TestimonialsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 `;
 

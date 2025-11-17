@@ -2,22 +2,7 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import { Copy, Sparkles, QrCode, Download, ExternalLink, Trash2, Clock } from "lucide-react";
 import QRCode from "react-qr-code";
-
-const theme = {
-  colors: {
-    background: "#C9AE92",
-    primary: "#8C1C1C",
-    secondary: "#1E3A28",
-    gold: "#D7A84E",
-    accent: "#8B5A2F",
-    text: "#2F2722",
-    lightText: "#F5EDE1",
-  }
-};
-
-// ─────────────────────────────
-// ❄️ Snow effect with animation
-// ─────────────────────────────
+import theme from "../theme/theme";
 
 const Snow = styled.div`
   position: fixed;
@@ -71,10 +56,6 @@ const generateSnowflakes = () => {
   }
   return arr;
 };
-
-// ─────────────────────────────
-// Layout
-// ─────────────────────────────
 
 const Container = styled.div`
   min-height: 100vh;
@@ -422,10 +403,6 @@ const SmallButton = styled.button`
     flex: 1;
   }
 `;
-
-// ─────────────────────────────
-// Recent Links Section
-// ─────────────────────────────
 
 const RecentBox = styled.div`
   margin-top: 60px;

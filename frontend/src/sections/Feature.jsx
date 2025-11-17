@@ -1,17 +1,5 @@
-// LandingPage.jsx
 import styled from "@emotion/styled";
-
-const theme = {
-  colors: {
-    background: "#C9AE92",
-    primary: "#8C1C1C",
-    secondary: "#1E3A28",
-    gold: "#D7A84E",
-    accent: "#8B5A2F",
-    text: "#2F2722",
-    lightText: "#F5EDE1",
-  }
-};
+import theme from "../theme/theme";
 
 const PageWrapper = styled.main`
   min-height: 100vh;
@@ -209,43 +197,6 @@ const IconWrapper = styled.div`
   }
 `;
 
-// export default function LandingPage() {
-//   return (
-//     <PageWrapper>
-//       <Content>
-//         <Badge>✨ Ancient URL Enchantment ✨</Badge>
-        
-//         <Title>
-//           The Magical <GradientText>Link Grimoire</GradientText>
-//         </Title>
-
-//         <Subtitle>
-//           Transform endless URLs into powerful enchanted links. Your personal mystical library for link management, complete with ancient QR runes and arcane analytics.
-//         </Subtitle>
-
-//         <FeatureGrid>
-//           <FeatureCard>
-//             <IconWrapper>⚡</IconWrapper>
-//             <h3>Instant Spell Casting</h3>
-//             <p>Shorten any URL in milliseconds with our magical enchantment technology. Transform chaos into elegance instantly.</p>
-//           </FeatureCard>
-
-//           <FeatureCard>
-//             <IconWrapper>🔮</IconWrapper>
-//             <h3>Magical QR Runes</h3>
-//             <p>Generate mystical QR codes adorned with ancient Christmas symbols. Scan them to reveal your enchanted destinations.</p>
-//           </FeatureCard>
-
-//           <FeatureCard>
-//             <IconWrapper>📚</IconWrapper>
-//             <h3>Arcane Archives</h3>
-//             <p>Store and organize all your enchanted links in our mystical vault. Access them anytime with powerful search spells.</p>
-//           </FeatureCard>
-//         </FeatureGrid>
-//       </Content>
-//     </PageWrapper>
-//   );
-// }
 
 export default function Feature() {
   return (

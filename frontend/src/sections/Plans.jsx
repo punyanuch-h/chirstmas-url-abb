@@ -1,17 +1,6 @@
 import styled from "@emotion/styled";
 import { Check } from "lucide-react";
-
-const theme = {
-  colors: {
-    background: "#C9AE92",
-    primary: "#8C1C1C",
-    secondary: "#1E3A28",
-    gold: "#D7A84E",
-    accent: "#8B5A2F",
-    text: "#2F2722",
-    lightText: "#F5EDE1",
-  }
-};
+import theme from "../theme/theme";
 
 const PageWrapper = styled.main`
   min-height: 100vh;
